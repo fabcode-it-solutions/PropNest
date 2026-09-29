@@ -1,0 +1,17 @@
+{
+  "name": "propnest",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "dev": "node api.js && pnpm --parallel --filter './apps/*' dev",
+    "build": "node api.js && pnpm --filter './packages/*' build && pnpm --filter './apps/*' build",
+    "lint": "pnpm --recursive lint",
+    "typecheck": "pnpm --recursive typecheck",
+    "test": "pnpm --recursive test"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

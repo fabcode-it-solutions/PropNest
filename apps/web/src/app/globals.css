@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #1B2D4F;
+    --gold: #C9A84C;
+    --ivory: #FAFAF8;
+    --border: #E4E2DD;
+    --muted: #6B7280;
+
+    /* Radix UI color tokens */
+    --radius: 8px;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: #E4E2DD;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ivory text-[#1A1A1A] font-sans;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Typography scale — display headings use Playfair, UI headings use Inter */
+  h1, h2, h3 {
+    @apply font-display;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  h4, h5, h6 {
+    @apply font-sans font-semibold;
+    line-height: 1.3;
+  }
+
+  /* Link resets */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Text selection */
+  ::selection {
+    background-color: #C9A84C22;
+    color: #1B2D4F;
+  }
+
+  /* Scrollbar — warm, subtle */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5F3EF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D1CFC9;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B5B2AB;
+  }
+}
+
+@layer components {
+  /* Section label — small uppercase label above headings */
+  .section-label {
+    @apply text-label uppercase tracking-widest text-navy/60 font-sans font-semibold;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  /* Divider */
+  .divider {
+    @apply border-t border-border;
+  }
+
+  /* Price display — Playfair, strong */
+  .price {
+    @apply font-display font-semibold text-navy;
+  }
+
+  /* Focus ring — consistent, warm navy */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy/30 focus-visible:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  /* Smooth image loading */
+  .img-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Skeleton pulse */
+  .skeleton {
+    @apply animate-pulse bg-[#E8E6E1] rounded;
+  }
+
+  /* Truncate to N lines */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Visually hidden (accessible) */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+}

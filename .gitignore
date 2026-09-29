@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+.next/
+out/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+*.pem
+
+# Testing
+coverage/
+.nyc_output/
+
+# Tooling
+.turbo/
+.vercel
+.parcel-cache/
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Certificates
+*.p12
+*.pfx
+*.key
+*.crt
+
+# Internal/dev-only docs
+CLAUDE.md
+project.md
+.claude/
+memory/
+
+# Misc
+*.tgz
+*.tmp
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat

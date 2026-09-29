@@ -1,0 +1,24 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for app icons -->
+  <circle cx="64" cy="64" r="64" fill="#1B2D4F"/>
+
+  <!-- Geometric "P" with architectural accent -->
+  <g transform="translate(28, 28)">
+    <!-- Vertical stem of P -->
+    <rect x="14" y="0" width="10" height="72" fill="#C9A84C" rx="2"/>
+
+    <!-- Top bowl of P (stylized as a door/building) -->
+    <path
+      d="M 24 8 Q 50 8 50 28 Q 50 48 32 48 L 24 48 Z"
+      fill="none"
+      stroke="#C9A84C"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Interior architectural detail (suggests door/entrance) -->
+    <line x1="24" y1="8" x2="24" y2="48" stroke="#1B2D4F" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="42" cy="28" r="3" fill="#1B2D4F" opacity="0.5"/>
+  </g>
+</svg>

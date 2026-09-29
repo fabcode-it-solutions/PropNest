@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm --filter @propnest/web build",
+  "installCommand": "pnpm install",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
+}
